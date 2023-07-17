@@ -331,7 +331,3 @@ select p.PNAME, COUNT(s.TITLE) as count from programmer p inner join software s 
 
 
 
-
-
-
-SELECT pname , COUNT(*)FROM software GROUP BY pname HAVING COUNT(*) = (  SELECT MAX(count_pname)   FROM (    SELECT COUNT(*) AS count_pname     FROM software     GROUP BY pname  ) AS counts)
